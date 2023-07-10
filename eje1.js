@@ -123,3 +123,68 @@ El topping de oreo cuesta 10 MXN.
 El topping de KitKat cuesta 15 MXN.
 El topping de brownie cuesta 20 MXN.
 En caso de no disponer del topping solicitado por el usuario, el programa le indicará “no tenemos este topping, lo sentimos.” y a continuación le informará el precio del helado sin ningún topping. */ 
+
+function heladoPrecio(topping) {
+    var precio = 50; 
+switch (topping) {
+    case "oreo":
+      precio = precio + 10;
+      break;
+    case "KitKat":
+      precio = precio + 15;
+      break;
+    case "brownie":
+      precio = precio + 20;
+      break;  
+    default:
+      "no tenemos este topping, lo sentimos.";
+        break;
+  }
+    return precio;
+}
+var topping = prompt("Elige un topping ")
+console.log("Precio total: " + heladoPrecio(topping))
+
+/* 10. Un conocido portal de educación en tecnología está ofreciendo programas para aprender a desarrollar aplicaciones. Escribe un programa que le indique a la persona interesada cuánto deberá pagar mensualmente de acuerdo a la opción elegida.
+El programa educativo contempla 3 diferentes niveles, cada uno con su costo mensual: Course: $4999 MXN
+Carrera $3999 MXN
+Master: $2999 MXN
+Adicionalmente preguntar si cuenta con alguna beca y aplicar el descuento correspondiente al precio final.
+Beca Facebook: 20% de descuento.
+Beca Google: 15% de descuento.
+Beca Jesua: 50% de descuento.
+Finalmente, además del precio mensual con descuento, indicar al usuario cuánto gastaría en total por el curso elegido, tomando en cuenta las siguientes duraciones:
+Course: 2 meses
+Carrera 6 meses
+Master: 12 meses */ 
+function cursoMensualidad(curso,descuento) {
+  var costo = 50;  
+  var duraciones; 
+switch (curso) {
+  case "course":
+    costo = 4999 ;
+    duraciones = "2 meses";
+    break;
+  case "carrera":
+    costo = 3999 ;
+    duraciones = "6 meses";
+    break;
+  case "master":
+    costo = 2999 ;
+    duraciones = "12 meses";
+    break;  
+}
+if (descuento =="Beca Facebook"){
+  costo = costo * .80;
+} else if (descuento =="Beca Google"){
+  costo = costo * .75; 
+} else if (descuento =="Beca Jesua"){
+  costo = costo * .50; 
+} else {
+  console.log("No tienes ningun descuento")
+}
+console.log("Total costo: " + costo + " duración del curso "+ duraciones);
+}
+var curso = prompt("¿Qué curso estas tomando? ")
+var descuento = prompt("¿Tienes beca?, si si especificala aqui")
+console.log(cursoMensualidad(curso, descuento));
