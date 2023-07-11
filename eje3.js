@@ -1,3 +1,4 @@
+
 // 1. Crea un programa que pregunte al usuario un número. Mostrar los números que son múltiplos de 5 desde 1 hasta el número introducido por el usuario.
 
 var num = Number(prompt("Ingresa un número"))
@@ -26,7 +27,52 @@ function loteria(num,num2){
 console.log(loteria(num,num2))
 
 // 3. Crea un programa que solicite al usuario números, si lo que este introduce es un número guardarlo en un arreglo. Para terminar el capturar el usuario debe ingresar el número 0. Finalmente mostrar la lista de números capturados en pantalla o en la consola.
+var num = Number(prompt("Ingresa un número")) 
+array = []
+
+    while ( num !=0) { 
+        array.push(num)
+        num = Number(prompt("Ingresa un número"))
+        
+        }
+    console.log(array)
 
 
 // 4. Crea un programa que solicite al usuario letras o palabras, si es así guardar el resultado. Para terminar de capturar el usuario no debe escribir valor alguno. Al terminar de capturar, mostrar en pantalla la concatenación de todas las palabras capturadas.
+var cadena = prompt("Ingresa letras o palabras")
+var array =[]
+
+    while ( cadena !="") { 
+        array.push(cadena)
+        }
+    console.log(array)
 // 5. Crea un programa que solicite al usuario un día de la semana (ej: lunes, jueves, domingo, etc). El programa mostrará un mensaje personalizado para cada día de la semana por medio de un alert. Y seguirá pidiendo al usuario introducir otro día. En caso de que el día introducido sea domingo mostrar al usuario el mensaje “Ve a descansar” y terminar la captura de información.
+
+var diaSemana = (prompt("Ingresa un día de la semana")).toLowerCase
+
+while (diaSemana !="domingo"){
+    
+    switch (diaSemana){
+        case "lunes":
+        alert("Es lunes");
+        break;
+        case "martes":
+        alert("Es Martes");
+        break;
+        case "miercoles":
+        alert("Es Miercoles");
+        break;
+        case "jueves":
+        alert("Es Jueves");
+        break;
+        case "viernes":
+        alert("Es Viernes");
+        break;
+        case "sabado":
+        alert("Es Sabado");
+        break;
+    
+    }
+    diaSemana = prompt("Ingresa un día de la semana");
+}
+console.log("Ve a descansar")
