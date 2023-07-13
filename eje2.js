@@ -23,18 +23,16 @@ console.log(arr);
 var array = [10,40,30,20,15,5];
 function menorArray(array){
 	var ordenado = [];
-	
-  
-  while ( array.length > 0){
-    var menor = array[0];
-	for(var i=0; i<array.length; i++){
-  	if(array[i] < menor){
-			menor = array[i];  
+	while ( array.length > 0){
+		var menor = array[0];
+		for(var i=0; i<array.length; i++){
+		if(array[i] < menor){
+				menor = array[i];  
 		}
     
 	} 
-  ordenado.push(menor);
-  array.splice(array.indexOf(menor),1);
+	ordenado.push(menor);
+	array.splice(array.indexOf(menor),1);
 			
 }  
 return ordenado

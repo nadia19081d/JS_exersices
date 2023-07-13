@@ -2,11 +2,15 @@
 
 
 /* 1. Crea un programa que imprima en consola los números impares del 1 al 50. */
-for (var i = 0; i <= 50; i ++) {
+var contador = 0;
+for (var i = 1; i <= 50; i ++) {
     if (i % 2 != 0 ){
-        console.log(i)      
+      contador++;  
+        console.log(i+ " es impar" ) 
+            
     }
 }
+console.log("Total impares " + contador )
 /* 2. Crea un programa que pregunte al usuario un número. Usando el archivo de arreglo de Pokémons, mostrar solo los nombres de los Pokémons cuyos números que son múltiplos de 5 desde 1 hasta el número introducido por el usuario. https://pastebin.com/Zzk8g7Z6. */
 var chosedPokemon = Number(prompt("Ingresa un número"));
 var pokemons = 
