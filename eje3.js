@@ -16,12 +16,12 @@ var num2 = Number(prompt("Ingresa un número entre 1 y 50"))
 function loteria(num,num2){
     var i = 1; 
     while (i < 50) { 
-        console.log(i)
-        i++
         if(i== num || i== num2){
             console.log(i + " Loteria") 
-
+        } else{
+        console.log(i)
         }
+        i++   
     }
 }
 console.log(loteria(num,num2))
@@ -44,8 +44,9 @@ var array =[]
 
     while ( cadena !="") { 
         array.push(cadena)
+        cadena = prompt("Ingresa letras o palabras")
         }
-    console.log(array)
+    console.log("Concatenación: " + array.join())
 // 5. Crea un programa que solicite al usuario un día de la semana (ej: lunes, jueves, domingo, etc). El programa mostrará un mensaje personalizado para cada día de la semana por medio de un alert. Y seguirá pidiendo al usuario introducir otro día. En caso de que el día introducido sea domingo mostrar al usuario el mensaje “Ve a descansar” y terminar la captura de información.
 
 var diaSemana = (prompt("Ingresa un día de la semana")).toLowerCase
@@ -76,3 +77,4 @@ while (diaSemana !="domingo"){
     diaSemana = prompt("Ingresa un día de la semana");
 }
 console.log("Ve a descansar")
+*/
